@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>{{ t.app_name }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<!-- ══════════════════ PAGE: HOME ══════════════════ -->
+<div id="pg-home" class="page active">
+  <header class="header">
+    <div class="logo">GOC<span>.</span></div>
+    <div class="hdr-right">
+      <div class="lang-bar">
+        {% for code,label,name in [('en','EN','English'),('fr','FR','Français'),('es','ES','Español'),('hi','HI','हिन्दी'),('ar','AR','العربية')] %}
+        <a class="lang-btn {% if lang==code %}active{% endif %}" href="/?lang={{ code }}" title="{{ name }}">{{ label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+  <main class="home-wrap">
+    <div class="shield-svg">
+      <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
+        <path d="M44 9L13 22v22c0 18.3 13.3 35.4 31 39.6C61.7 79.4 75 62.3 75 44V22L44 9z" fill="rgba(0,229,255,0.08)" stroke="#00e5ff" stroke-width="1.5"/>
+        <path d="M33 44l8 8 14-15" stroke="#00e5ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h1 class="home-title">{{ t.app_name }}</h1>
+    <p class="home-sub">{{ t.tagline }}</p>
+    <div class="field-group">
+      <label>{{ t.username_label }}</label>
+      <input id="username" type="text" placeholder="{{ t.username_placeholder }}" maxlength="24" autocomplete="off"/>
+    </div>
+    <button class="anon-link" onclick="G.playAnon()">{{ t.play_anon }} →</button>
+    <button class="btn-primary" onclick="G.goChoose()">{{ t.start_btn }}</button>
+    <div class="stats-row">
+      <div class="stat-pill"><strong>2</strong> {{ t.stat_levels }}</div>
+      <div class="stat-pill"><strong>20+</strong> {{ t.stat_questions }}</div>
+      <div class="stat-pill"><strong>∞</strong> {{ t.stat_board }}</div>
+    </div>
+  </main>
+</div>
+
+<!-- ══════════════════ PAGE: CHOOSE ══════════════════ -->
+<div id="pg-choose" class="page">
+  <header class="header">
+    <div class="logo">GOC<span>.</span></div>
+    <div class="hdr-right">
+      <div class="lang-bar">
+        {% for code,label,name in [('en','EN','English'),('fr','FR','Français'),('es','ES','Español'),('hi','HI','हिन्दी'),('ar','AR','العربية')] %}
+        <a class="lang-btn {% if lang==code %}active{% endif %}" href="/?lang={{ code }}" title="{{ name }}">{{ label }}</a>
+        {% endfor %}
+      </div>
+      <button class="nav-btn" onclick="G.show('home')">← {{ t.back }}</button>
+    </div>
+  </header>
+  <main class="choose-wrap">
+    <h2 class="section-heading">{{ t.choose_title }}</h2>
+    <p class="section-sub">{{ t.choose_sub }}</p>
+    <div class="diff-grid">
+      <div class="diff-card beginner" onclick="G.startGame('beginner')">
+        <span class="diff-badge beg-badge">● {{ t.beginner_badge }}</span>
+        <div class="diff-title">{{ t.beginner_title }}</div>
+        <p class="diff-desc">{{ t.beginner_desc }}</p>
+        <div class="diff-meta">
+          <span>⏱ {{ t.beginner_time }}</span>
+          <span>📋 {{ t.ten_questions }}</span>
+          <span>🎯 {{ t.accessible }}</span>
+        </div>
+      </div>
+      <div class="diff-card advanced" onclick="G.startGame('advanced')">
+        <span class="diff-badge adv-badge">◆ {{ t.advanced_badge }}</span>
+        <div class="diff-title">{{ t.advanced_title }}</div>
+        <p class="diff-desc">{{ t.advanced_desc }}</p>
+        <div class="diff-meta">
+          <span>⏱ {{ t.advanced_time }}</span>
+          <span>📋 {{ t.ten_questions }}</span>
+          <span>🎯 {{ t.challenging }}</span>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- ══════════════════ PAGE: GAME ══════════════════ -->
+<div id="pg-game" class="page">
+  <header class="header">
+    <div class="logo">GOC<span>.</span></div>
+    <button class="nav-btn danger-btn" onclick="G.quitGame()">{{ t.quit_btn }}</button>
+  </header>
+  <main class="game-wrap">
+    <div class="game-hud">
+      <div class="timer-group">
+        <div class="timer-track"><div id="timer-bar"></div></div>
+        <div id="timer-num">30</div>
+      </div>
+      <div class="hud-score">{{ t.score_label }}: <strong id="live-score">0</strong></div>
+      <div id="q-counter" class="hud-counter">1/10</div>
+    </div>
+
+    <div class="arena" id="arena">
+      <div class="card-ghost ghost2"></div>
+      <div class="card-ghost ghost1"></div>
+      <div class="quiz-card" id="quiz-card">
+        <div class="swipe-overlay sw-right" id="sw-right">{{ t.hint_true }}</div>
+        <div class="swipe-overlay sw-left"  id="sw-left">{{ t.hint_false }}</div>
+        <div class="swipe-overlay sw-up"    id="sw-up">{{ t.hint_maybe }}</div>
+        <div class="swipe-overlay sw-down"  id="sw-down">{{ t.hint_skip }}</div>
+        <div class="card-cat" id="card-cat"></div>
+        <div class="card-q"   id="card-q"></div>
+        <div class="card-rule"></div>
+        <div class="card-tip" id="card-tip">{{ t.swipe_true }} / {{ t.swipe_false }}</div>
+        <div class="card-dirs">
+          <div class="cdir"><div class="cdir-key">←</div><span style="color:var(--red)">{{ t.swipe_false }}</span></div>
+          <div class="cdir"><div class="cdir-key">↑</div><span style="color:var(--accent)">{{ t.swipe_maybe }}</span></div>
+          <div class="cdir"><div class="cdir-key">↓</div><span style="color:var(--yellow)">{{ t.swipe_skip }}</span></div>
+          <div class="cdir"><div class="cdir-key">→</div><span style="color:var(--green)">{{ t.swipe_true }}</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ans-grid" id="ans-grid">
+      <button class="ans-btn" id="btn-true"  onclick="G.answer(true)">✓ {{ t.btn_true }}</button>
+      <button class="ans-btn" id="btn-false" onclick="G.answer(false)">✗ {{ t.btn_false }}</button>
+      <button class="ans-btn" id="btn-maybe" onclick="G.answer('maybe')">— {{ t.btn_maybe }}</button>
+      <button class="ans-btn" id="btn-skip"  onclick="G.answer('skip')">↓ {{ t.btn_skip }}</button>
+    </div>
+  </main>
+</div>
+
+<!-- ══════════════════ PAGE: SCORE ══════════════════ -->
+<div id="pg-score" class="page">
+  <header class="header"><div class="logo">GOC<span>.</span></div></header>
+  <main class="score-wrap">
+    <div class="score-ring">
+      <svg viewBox="0 0 148 148">
+        <circle class="ring-bg" cx="74" cy="74" r="66"/>
+        <circle class="ring-fg" id="ring-fg" cx="74" cy="74" r="66" stroke-dasharray="415" stroke-dashoffset="415"/>
+      </svg>
+      <div class="ring-inner">
+        <div class="ring-num" id="ring-num">0</div>
+        <div class="ring-label">{{ t.points_label }}</div>
+      </div>
+    </div>
+    <h2 class="score-title" id="score-title"></h2>
+    <p class="score-msg"   id="score-msg"></p>
+    <div class="stat-trio">
+      <div class="trio-card green"><div class="trio-num" id="tc-correct">0</div><div class="trio-lbl">{{ t.correct_label }}</div></div>
+      <div class="trio-card red">  <div class="trio-num" id="tc-wrong">0</div>  <div class="trio-lbl">{{ t.wrong_label }}</div></div>
+      <div class="trio-card amber"><div class="trio-num" id="tc-skip">0</div>   <div class="trio-lbl">{{ t.skipped_label }}</div></div>
+    </div>
+    <div id="rank-toast" class="rank-toast" style="display:none"></div>
+    <div class="score-actions">
+      <button class="btn-primary" onclick="G.showDetails()">{{ t.view_details }}</button>
+      <button class="btn-sec" onclick="G.show('lb');G.renderLB()">{{ t.view_lb }}</button>
+      <button class="btn-sec" onclick="G.show('choose')">{{ t.play_again }}</button>
+      <button class="btn-sec" onclick="G.show('home')">{{ t.back_home }}</button>
+    </div>
+  </main>
+</div>
+
+<!-- ══════════════════ PAGE: DETAILS ══════════════════ -->
+<div id="pg-details" class="page">
+  <header class="header">
+    <div class="logo">GOC<span>.</span></div>
+    <button class="nav-btn" onclick="G.show('score')">← {{ t.back }}</button>
+  </header>
+  <main class="details-wrap">
+    <h2 class="section-heading">{{ t.details_title }}</h2>
+    <p class="section-sub">{{ t.details_sub }}</p>
+    <div class="tbl-scroll">
+      <table class="dtbl">
+        <thead><tr>
+          <th>{{ t.col_num }}</th>
+          <th>{{ t.col_question }}</th>
+          <th>{{ t.col_yours }}</th>
+          <th>{{ t.col_correct }}</th>
+          <th>{{ t.col_result }}</th>
+        </tr></thead>
+        <tbody id="dtbl-body"></tbody>
+      </table>
+    </div>
+  </main>
+</div>
+
+<!-- ══════════════════ PAGE: LEADERBOARD ══════════════════ -->
+<div id="pg-lb" class="page">
+  <header class="header">
+    <div class="logo">GOC<span>.</span></div>
+    <button class="nav-btn" onclick="G.show('home')">← {{ t.back }}</button>
+  </header>
+  <main class="lb-wrap">
+    <h2 class="section-heading">{{ t.lb_title }}</h2>
+    <p class="section-sub">{{ t.lb_sub }}</p>
+    <div class="tab-bar">
+      <button class="tab active" id="tab-beg" onclick="G.switchTab('beginner')">{{ t.tab_beginner }}</button>
+      <button class="tab"        id="tab-adv" onclick="G.switchTab('advanced')">{{ t.tab_advanced }}</button>
+    </div>
+    <div id="lb-rows"></div>
+  </main>
+</div>
+
+<!-- ══════════════════ TOAST ══════════════════ -->
+<div id="toast" class="toast"></div>
+
+<!-- ══════════════════ JS DATA FROM SERVER ══════════════════ -->
+<script>
+const LANG = "{{ lang }}";
+const DIR  = "{{ dir }}";
+const T = {{ t | tojson }};
+</script>
+<script src="/static/js/game.js"></script>
+</body>
+</html>

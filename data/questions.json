@@ -1,0 +1,132 @@
+{
+  "en": {
+    "beginner": [
+      {"category":"Passwords","question":"You should use the same password on multiple websites to remember them easily.","answer":false,"explanation":"Reusing passwords means one breach exposes all your accounts. Use a password manager."},
+      {"category":"Phishing","question":"An email asking you to urgently verify your bank details by clicking a link is likely a phishing attack.","answer":true,"explanation":"Legitimate banks never ask for credentials via email. This is a classic phishing attempt."},
+      {"category":"Updates","question":"It is safe to delay software updates indefinitely — they are optional improvements.","answer":false,"explanation":"Updates patch critical security vulnerabilities. Delaying them leaves you exposed to known attacks."},
+      {"category":"Wi-Fi","question":"Using public Wi-Fi to access your bank account without a VPN is risky.","answer":true,"explanation":"Public Wi-Fi can be monitored by attackers. Always use a VPN for sensitive transactions."},
+      {"category":"Privacy","question":"Accepting all cookies on every website has no impact on your privacy.","answer":false,"explanation":"Third-party cookies track your behaviour across the web and build profiles used for targeting."},
+      {"category":"Passwords","question":"A password like 'P@ssw0rd!' is considered highly secure.","answer":false,"explanation":"Common substitutions (@ for a, 0 for o) are well known to attackers. Use long random passphrases."},
+      {"category":"2FA","question":"Two-factor authentication (2FA) significantly reduces the risk of account takeover.","answer":true,"explanation":"Even if your password is stolen, 2FA requires a second factor such as a phone code to log in."},
+      {"category":"Downloads","question":"Downloading software from unofficial third-party sites carries malware risk.","answer":true,"explanation":"Unofficial sources may bundle malware. Always download from official vendor websites or app stores."},
+      {"category":"Social Media","question":"Sharing your full birthdate and home address publicly on social media is harmless.","answer":false,"explanation":"Attackers use personal details for identity theft, account recovery bypass, and social engineering."},
+      {"category":"Antivirus","question":"Antivirus software alone is enough to keep you completely safe online.","answer":false,"explanation":"Antivirus is one layer. Good security also requires updates, strong passwords, awareness and backups."}
+    ],
+    "advanced": [
+      {"category":"Encryption","question":"HTTPS guarantees the website you are visiting is legitimate and trustworthy.","answer":false,"explanation":"HTTPS only encrypts the connection. Phishing sites can also use HTTPS. Always verify the domain carefully."},
+      {"category":"Malware","question":"Ransomware typically encrypts your files and demands payment to restore access.","answer":true,"explanation":"Ransomware encrypts data and extorts victims. Regular offline backups are the best defence."},
+      {"category":"Networks","question":"A firewall alone is sufficient protection against all cyber threats.","answer":false,"explanation":"Firewalls filter network traffic but cannot stop phishing, malicious insiders, or zero-day exploits."},
+      {"category":"Social Eng.","question":"Social engineering attacks target human psychology rather than technical vulnerabilities.","answer":true,"explanation":"Social engineering manipulates people into revealing information or taking harmful actions. Training is key."},
+      {"category":"Data","question":"Deleting a file and emptying the recycle bin permanently removes it from a hard drive.","answer":false,"explanation":"Data remains on disk until overwritten. Use dedicated secure-erase tools for sensitive file deletion."},
+      {"category":"VPN","question":"A VPN makes you completely anonymous on the internet.","answer":false,"explanation":"VPNs hide your IP from sites you visit, but the VPN provider itself can see your traffic."},
+      {"category":"Attacks","question":"A DDoS attack floods a server with traffic to make it unavailable to legitimate users.","answer":true,"explanation":"Distributed Denial of Service attacks overwhelm servers using thousands of compromised machines simultaneously."},
+      {"category":"Auth","question":"OAuth allows third-party apps to access your account without sharing your password.","answer":true,"explanation":"OAuth grants limited access via tokens. The third party never sees your actual credentials."},
+      {"category":"Zero-Day","question":"Zero-day vulnerabilities are widely known exploits that already have patches available.","answer":false,"explanation":"Zero-days are unknown vulnerabilities with no patch available, making them extremely dangerous."},
+      {"category":"Backups","question":"The 3-2-1 backup rule recommends 3 copies on 2 different media with 1 stored offsite.","answer":true,"explanation":"The 3-2-1 rule ensures data survives hardware failure, local disasters, and ransomware attacks."}
+    ]
+  },
+  "fr": {
+    "beginner": [
+      {"category":"Mots de passe","question":"Il est conseillé d'utiliser le même mot de passe sur plusieurs sites pour s'en souvenir facilement.","answer":false,"explanation":"Réutiliser un mot de passe signifie qu'une seule fuite compromet tous vos comptes. Utilisez un gestionnaire de mots de passe."},
+      {"category":"Hameçonnage","question":"Un email vous demandant de vérifier vos coordonnées bancaires en cliquant sur un lien est probablement du phishing.","answer":true,"explanation":"Les vraies banques ne demandent jamais vos identifiants par email. C'est une tentative classique de phishing."},
+      {"category":"Mises à jour","question":"Il est sans risque de retarder indéfiniment les mises à jour logicielles, ce sont des améliorations optionnelles.","answer":false,"explanation":"Les mises à jour corrigent souvent des failles critiques. Les ignorer vous expose à des attaques connues."},
+      {"category":"Wi-Fi","question":"Accéder à son compte bancaire via un Wi-Fi public sans VPN est risqué.","answer":true,"explanation":"Le Wi-Fi public peut être surveillé. Utilisez toujours un VPN pour les transactions sensibles."},
+      {"category":"Vie privée","question":"Accepter tous les cookies sur chaque site n'a aucun impact sur votre vie privée.","answer":false,"explanation":"Les cookies tiers tracent votre comportement sur le web et créent des profils pour la publicité ciblée."},
+      {"category":"Mots de passe","question":"Un mot de passe comme 'P@ssw0rd!' est considéré comme très sécurisé.","answer":false,"explanation":"Les substitutions courantes sont bien connues des attaquants. Utilisez plutôt de longues phrases aléatoires."},
+      {"category":"2FA","question":"L'authentification à deux facteurs (2FA) réduit significativement le risque de piratage de compte.","answer":true,"explanation":"Même si votre mot de passe est volé, la 2FA exige un second facteur comme un code sur téléphone."},
+      {"category":"Téléchargements","question":"Télécharger des logiciels depuis des sites tiers non officiels comporte un risque de malware.","answer":true,"explanation":"Les sources non officielles peuvent contenir des malwares. Téléchargez toujours depuis les sites officiels."},
+      {"category":"Réseaux sociaux","question":"Partager sa date de naissance complète et son adresse publiquement sur les réseaux sociaux est sans danger.","answer":false,"explanation":"Les attaquants utilisent ces informations pour le vol d'identité et l'ingénierie sociale."},
+      {"category":"Antivirus","question":"Un antivirus seul suffit à vous protéger complètement en ligne.","answer":false,"explanation":"L'antivirus est une couche parmi d'autres. La sécurité nécessite aussi des mises à jour et de bons mots de passe."}
+    ],
+    "advanced": [
+      {"category":"Chiffrement","question":"HTTPS garantit que le site web visité est légitime et de confiance.","answer":false,"explanation":"HTTPS chiffre uniquement la connexion. Les sites de phishing peuvent aussi l'utiliser. Vérifiez toujours le domaine."},
+      {"category":"Malware","question":"Un ransomware chiffre vos fichiers et exige un paiement pour restaurer l'accès.","answer":true,"explanation":"Les ransomwares chiffrent les données et extorquent les victimes. Des sauvegardes hors ligne sont la meilleure défense."},
+      {"category":"Réseaux","question":"Un pare-feu seul suffit pour se protéger contre toutes les cybermenaces.","answer":false,"explanation":"Les pare-feux filtrent le trafic réseau mais ne stoppent pas le phishing, les menaces internes ou les zero-days."},
+      {"category":"Ingénierie sociale","question":"Les attaques par ingénierie sociale ciblent la psychologie humaine plutôt que les failles techniques.","answer":true,"explanation":"L'ingénierie sociale manipule les personnes pour obtenir des informations. La formation est essentielle."},
+      {"category":"Données","question":"Supprimer un fichier et vider la corbeille l'efface définitivement du disque dur.","answer":false,"explanation":"Les données restent sur le disque tant qu'elles ne sont pas écrasées. Utilisez des outils d'effacement sécurisé."},
+      {"category":"VPN","question":"Un VPN vous rend totalement anonyme sur internet.","answer":false,"explanation":"Un VPN masque votre IP aux sites visités, mais le fournisseur VPN peut toujours voir votre trafic."},
+      {"category":"Attaques","question":"Une attaque DDoS inonde un serveur de trafic pour le rendre indisponible aux utilisateurs légitimes.","answer":true,"explanation":"Ces attaques submergent les serveurs grâce à des milliers de machines compromises simultanément."},
+      {"category":"Auth","question":"OAuth permet à des applications tierces d'accéder à votre compte sans partager votre mot de passe.","answer":true,"explanation":"OAuth accorde un accès limité via des jetons. Le tiers ne voit jamais vos identifiants réels."},
+      {"category":"Zero-Day","question":"Les vulnérabilités zero-day sont des failles connues pour lesquelles des correctifs existent.","answer":false,"explanation":"Les zero-days sont des failles inconnues sans correctif disponible, extrêmement dangereuses."},
+      {"category":"Sauvegardes","question":"La règle 3-2-1 recommande 3 copies sur 2 supports différents dont 1 hors site.","answer":true,"explanation":"La règle 3-2-1 garantit la survie des données face aux pannes matérielles, catastrophes locales et ransomwares."}
+    ]
+  },
+  "es": {
+    "beginner": [
+      {"category":"Contraseñas","question":"Es recomendable usar la misma contraseña en varios sitios web para recordarla fácilmente.","answer":false,"explanation":"Reutilizar contraseñas significa que una sola brecha expone todas tus cuentas. Usa un gestor de contraseñas."},
+      {"category":"Phishing","question":"Un correo que pide verificar urgentemente datos bancarios haciendo clic en un enlace es probablemente phishing.","answer":true,"explanation":"Los bancos legítimos nunca piden credenciales por correo. Es un intento clásico de phishing."},
+      {"category":"Actualizaciones","question":"Es seguro retrasar indefinidamente las actualizaciones de software, son mejoras opcionales.","answer":false,"explanation":"Las actualizaciones parchean vulnerabilidades críticas. Ignorarlas te deja expuesto a ataques conocidos."},
+      {"category":"Wi-Fi","question":"Acceder a tu cuenta bancaria usando Wi-Fi público sin VPN es arriesgado.","answer":true,"explanation":"El Wi-Fi público puede ser monitorizado. Usa siempre VPN para transacciones sensibles."},
+      {"category":"Privacidad","question":"Aceptar todas las cookies en cada sitio web no afecta tu privacidad.","answer":false,"explanation":"Las cookies de terceros rastrean tu comportamiento en la web y crean perfiles para publicidad dirigida."},
+      {"category":"Contraseñas","question":"Una contraseña como 'P@ssw0rd!' se considera muy segura.","answer":false,"explanation":"Las sustituciones comunes son bien conocidas por los atacantes. Usa frases largas y aleatorias."},
+      {"category":"2FA","question":"La autenticación de dos factores (2FA) reduce significativamente el riesgo de robo de cuentas.","answer":true,"explanation":"Aunque roben tu contraseña, la 2FA requiere un segundo factor como un código de teléfono para iniciar sesión."},
+      {"category":"Descargas","question":"Descargar software de sitios de terceros no oficiales conlleva riesgo de malware.","answer":true,"explanation":"Las fuentes no oficiales pueden incluir malware. Descarga siempre desde sitios oficiales del fabricante."},
+      {"category":"Redes sociales","question":"Compartir públicamente tu fecha de nacimiento y dirección en redes sociales es inofensivo.","answer":false,"explanation":"Los atacantes usan esta información para robo de identidad e ingeniería social."},
+      {"category":"Antivirus","question":"Un antivirus por sí solo es suficiente para mantenerte completamente seguro en línea.","answer":false,"explanation":"El antivirus es solo una capa. La seguridad también requiere actualizaciones, buenas contraseñas y copias de seguridad."}
+    ],
+    "advanced": [
+      {"category":"Cifrado","question":"HTTPS garantiza que el sitio web que visitas es legítimo y de confianza.","answer":false,"explanation":"HTTPS solo cifra la conexión. Los sitios de phishing también pueden usarlo. Verifica siempre el dominio."},
+      {"category":"Malware","question":"Un ransomware cifra tus archivos y exige un pago para restaurar el acceso.","answer":true,"explanation":"El ransomware cifra los datos y extorsiona a las víctimas. Las copias de seguridad sin conexión son la mejor defensa."},
+      {"category":"Redes","question":"Un firewall solo es suficiente para protegerse contra todas las ciberamenazas.","answer":false,"explanation":"Los firewalls filtran el tráfico de red pero no detienen el phishing, amenazas internas o exploits zero-day."},
+      {"category":"Ing. Social","question":"Los ataques de ingeniería social se dirigen a la psicología humana en lugar de vulnerabilidades técnicas.","answer":true,"explanation":"La ingeniería social manipula a las personas para que revelen información. La formación es clave."},
+      {"category":"Datos","question":"Eliminar un archivo y vaciar la papelera lo borra permanentemente del disco duro.","answer":false,"explanation":"Los datos permanecen en el disco hasta que se sobreescriben. Usa herramientas de borrado seguro para archivos sensibles."},
+      {"category":"VPN","question":"Una VPN te hace completamente anónimo en internet.","answer":false,"explanation":"Las VPN ocultan tu IP de los sitios web, pero el proveedor VPN aún puede ver tu tráfico."},
+      {"category":"Ataques","question":"Un ataque DDoS inunda un servidor con tráfico para hacerlo inaccesible a los usuarios legítimos.","answer":true,"explanation":"Los ataques de denegación de servicio sobrecargan servidores usando miles de máquinas comprometidas."},
+      {"category":"Auth","question":"OAuth permite que aplicaciones de terceros accedan a tu cuenta sin compartir tu contraseña.","answer":true,"explanation":"OAuth otorga acceso limitado mediante tokens. El tercero nunca ve tus credenciales reales."},
+      {"category":"Zero-Day","question":"Las vulnerabilidades zero-day son exploits ampliamente conocidos con parches disponibles.","answer":false,"explanation":"Los zero-days son vulnerabilidades desconocidas sin parche disponible, extremadamente peligrosas."},
+      {"category":"Copias seg.","question":"La regla 3-2-1 recomienda 3 copias en 2 soportes distintos con 1 almacenada fuera del sitio.","answer":true,"explanation":"La regla 3-2-1 garantiza que los datos sobrevivan a fallos de hardware, desastres locales y ransomware."}
+    ]
+  },
+  "hi": {
+    "beginner": [
+      {"category":"पासवर्ड","question":"याद रखने के लिए कई वेबसाइटों पर एक ही पासवर्ड का उपयोग करना उचित है।","answer":false,"explanation":"एक पासवर्ड के लीक होने से सभी अकाउंट खतरे में पड़ जाते हैं। पासवर्ड मैनेजर का उपयोग करें।"},
+      {"category":"फ़िशिंग","question":"लिंक पर क्लिक करके बैंक विवरण सत्यापित करने को कहने वाला ईमेल फ़िशिंग हो सकता है।","answer":true,"explanation":"असली बैंक कभी भी ईमेल से क्रेडेंशियल नहीं मांगते। यह क्लासिक फ़िशिंग है।"},
+      {"category":"अपडेट","question":"सॉफ़्टवेयर अपडेट को अनिश्चित काल के लिए टालना सुरक्षित है, ये वैकल्पिक सुधार हैं।","answer":false,"explanation":"अपडेट अक्सर महत्वपूर्ण सुरक्षा खामियों को ठीक करते हैं। इन्हें टालना आपको जोखिम में डालता है।"},
+      {"category":"Wi-Fi","question":"VPN के बिना सार्वजनिक Wi-Fi पर बैंकिंग करना जोखिमपूर्ण है।","answer":true,"explanation":"सार्वजनिक Wi-Fi की निगरानी हो सकती है। संवेदनशील लेनदेन के लिए हमेशा VPN का उपयोग करें।"},
+      {"category":"गोपनीयता","question":"हर वेबसाइट पर सभी कुकीज़ स्वीकार करना आपकी गोपनीयता पर कोई असर नहीं डालता।","answer":false,"explanation":"थर्ड-पार्टी कुकीज़ आपकी ऑनलाइन गतिविधि को ट्रैक करती हैं और लक्षित विज्ञापन के लिए प्रोफ़ाइल बनाती हैं।"},
+      {"category":"पासवर्ड","question":"'P@ssw0rd!' जैसा पासवर्ड बेहद सुरक्षित माना जाता है।","answer":false,"explanation":"सामान्य प्रतिस्थापन हमलावरों को अच्छी तरह पता होते हैं। लंबे यादृच्छिक पासफ़्रेज़ उपयोग करें।"},
+      {"category":"2FA","question":"दो-कारक प्रमाणीकरण (2FA) अकाउंट हैकिंग के जोखिम को काफी कम करता है।","answer":true,"explanation":"पासवर्ड चोरी होने पर भी, 2FA लॉगिन के लिए दूसरे कारक जैसे फ़ोन कोड की आवश्यकता होती है।"},
+      {"category":"डाउनलोड","question":"अनऑफ़िशियल तृतीय-पक्ष साइटों से सॉफ़्टवेयर डाउनलोड करने में मैलवेयर का जोखिम होता है।","answer":true,"explanation":"अनऑफ़िशियल स्रोतों में मैलवेयर हो सकता है। हमेशा आधिकारिक वेबसाइट से डाउनलोड करें।"},
+      {"category":"सोशल मीडिया","question":"सोशल मीडिया पर अपनी जन्मतिथि और पता सार्वजनिक रूप से साझा करना हानिरहित है।","answer":false,"explanation":"हमलावर इन जानकारियों का उपयोग पहचान की चोरी और सोशल इंजीनियरिंग के लिए करते हैं।"},
+      {"category":"एंटीवायरस","question":"एंटीवायरस सॉफ़्टवेयर अकेले आपको ऑनलाइन पूरी तरह सुरक्षित रखने के लिए पर्याप्त है।","answer":false,"explanation":"एंटीवायरस सुरक्षा की एक परत मात्र है। मज़बूत सुरक्षा के लिए अपडेट, मज़बूत पासवर्ड और बैकअप भी जरूरी हैं।"}
+    ],
+    "advanced": [
+      {"category":"एन्क्रिप्शन","question":"HTTPS इस बात की गारंटी देता है कि जो वेबसाइट आप देख रहे हैं वह वैध और विश्वसनीय है।","answer":false,"explanation":"HTTPS केवल कनेक्शन को एन्क्रिप्ट करता है। फ़िशिंग साइटें भी HTTPS उपयोग कर सकती हैं। डोमेन हमेशा जांचें।"},
+      {"category":"मैलवेयर","question":"रैनसमवेयर आमतौर पर आपकी फ़ाइलों को एन्क्रिप्ट करता है और एक्सेस बहाल करने के लिए भुगतान मांगता है।","answer":true,"explanation":"रैनसमवेयर डेटा एन्क्रिप्ट करके पीड़ितों से जबरन वसूली करता है। ऑफ़लाइन बैकअप सबसे अच्छा बचाव है।"},
+      {"category":"नेटवर्क","question":"एक फ़ायरवॉल अकेले सभी साइबर खतरों से बचाने के लिए पर्याप्त है।","answer":false,"explanation":"फ़ायरवॉल नेटवर्क ट्रैफ़िक फ़िल्टर करता है लेकिन फ़िशिंग, इनसाइडर हमले या ज़ीरो-डे नहीं रोक सकता।"},
+      {"category":"सोशल इंज.","question":"सोशल इंजीनियरिंग हमले तकनीकी खामियों के बजाय मानव मनोविज्ञान को निशाना बनाते हैं।","answer":true,"explanation":"सोशल इंजीनियरिंग लोगों को जानकारी देने के लिए मानसिक रूप से प्रेरित करती है। प्रशिक्षण सबसे जरूरी है।"},
+      {"category":"डेटा","question":"फ़ाइल हटाने और रीसायकल बिन खाली करने से हार्ड ड्राइव से डेटा स्थायी रूप से मिट जाता है।","answer":false,"explanation":"डेटा तब तक डिस्क पर बना रहता है जब तक उसे ओवरराइट नहीं किया जाता। सुरक्षित इरेज़ टूल उपयोग करें।"},
+      {"category":"VPN","question":"VPN आपको इंटरनेट पर पूरी तरह गुमनाम बना देता है।","answer":false,"explanation":"VPN साइटों से आपका IP छुपाता है, लेकिन VPN प्रदाता आपका ट्रैफ़िक देख सकता है।"},
+      {"category":"हमले","question":"DDoS हमला सर्वर को ट्रैफ़िक से भर देता है ताकि वैध उपयोगकर्ता उसे एक्सेस न कर सकें।","answer":true,"explanation":"डिस्ट्रिब्यूटेड डिनायल ऑफ़ सर्विस हमले कई हज़ार समझौता किए गए कंप्यूटरों का उपयोग करके सर्वर को ओवरलोड करते हैं।"},
+      {"category":"प्रमाणीकरण","question":"OAuth तृतीय-पक्ष ऐप्स को आपका पासवर्ड साझा किए बिना आपके अकाउंट तक सीमित पहुंच देता है।","answer":true,"explanation":"OAuth टोकन के माध्यम से सीमित पहुंच प्रदान करता है। तृतीय पक्ष कभी भी आपका असली पासवर्ड नहीं देखता।"},
+      {"category":"ज़ीरो-डे","question":"ज़ीरो-डे भेद्यताएं व्यापक रूप से ज्ञात एक्सप्लॉइट हैं जिनके लिए पैच उपलब्ध हैं।","answer":false,"explanation":"ज़ीरो-डे अज्ञात भेद्यताएं हैं जिनके लिए कोई पैच उपलब्ध नहीं होता, ये अत्यंत खतरनाक होती हैं।"},
+      {"category":"बैकअप","question":"3-2-1 बैकअप नियम में 3 कॉपी, 2 अलग मीडिया पर, जिनमें से 1 ऑफसाइट स्टोर करने की सलाह दी जाती है।","answer":true,"explanation":"3-2-1 नियम सुनिश्चित करता है कि हार्डवेयर फेल, स्थानीय आपदा और रैनसमवेयर से डेटा बचा रहे।"}
+    ]
+  },
+  "ar": {
+    "beginner": [
+      {"category":"كلمات المرور","question":"من المستحسن استخدام نفس كلمة المرور في مواقع متعددة لتسهيل تذكرها.","answer":false,"explanation":"إعادة استخدام كلمة المرور تعني أن اختراقاً واحداً يكشف جميع حساباتك. استخدم مدير كلمات المرور."},
+      {"category":"التصيد","question":"البريد الإلكتروني الذي يطلب التحقق من البيانات البنكية بشكل عاجل بالضغط على رابط هو على الأرجح محاولة تصيد.","answer":true,"explanation":"البنوك الحقيقية لا تطلب أبداً بيانات الدخول عبر البريد الإلكتروني. هذه محاولة تصيد كلاسيكية."},
+      {"category":"التحديثات","question":"من الآمن تأجيل تحديثات البرامج إلى أجل غير مسمى فهي مجرد تحسينات اختيارية.","answer":false,"explanation":"التحديثات تُصلح ثغرات أمنية حرجة. تأجيلها يُعرّضك لهجمات معروفة."},
+      {"category":"Wi-Fi","question":"الوصول إلى الحساب البنكي عبر شبكة Wi-Fi عامة دون VPN أمر محفوف بالمخاطر.","answer":true,"explanation":"يمكن مراقبة شبكات Wi-Fi العامة من قِبل المهاجمين. استخدم دائماً VPN للمعاملات الحساسة."},
+      {"category":"الخصوصية","question":"قبول جميع ملفات تعريف الارتباط على كل موقع لا يؤثر على خصوصيتك.","answer":false,"explanation":"ملفات تعريف الارتباط الخارجية تتتبع سلوكك على الإنترنت وتبني ملفات تعريف للإعلانات المستهدفة."},
+      {"category":"كلمات المرور","question":"كلمة مرور مثل 'P@ssw0rd!' تعتبر آمنة جداً.","answer":false,"explanation":"الاستبدالات الشائعة معروفة جيداً للمهاجمين. استخدم عبارات طويلة وعشوائية بدلاً من ذلك."},
+      {"category":"المصادقة 2FA","question":"المصادقة الثنائية (2FA) تقلل بشكل كبير من خطر اختراق الحسابات.","answer":true,"explanation":"حتى لو سُرقت كلمة مرورك، تتطلب المصادقة الثنائية عاملاً ثانياً كرمز على الهاتف لتسجيل الدخول."},
+      {"category":"التنزيلات","question":"تنزيل البرامج من مواقع غير رسمية يحمل خطر البرامج الضارة.","answer":true,"explanation":"المصادر غير الرسمية قد تحتوي على برامج ضارة. قم دائماً بالتنزيل من المواقع الرسمية."},
+      {"category":"التواصل الاجتماعي","question":"مشاركة تاريخ الميلاد الكامل والعنوان علناً على وسائل التواصل الاجتماعي أمر غير ضار.","answer":false,"explanation":"يستخدم المهاجمون هذه المعلومات لسرقة الهوية والهندسة الاجتماعية."},
+      {"category":"مضاد الفيروسات","question":"برنامج مضاد الفيروسات وحده كافٍ لحمايتك بشكل كامل على الإنترنت.","answer":false,"explanation":"مضاد الفيروسات هو طبقة واحدة فقط. الأمن الجيد يتطلب أيضاً تحديثات وكلمات مرور قوية ونسخاً احتياطية."}
+    ],
+    "advanced": [
+      {"category":"التشفير","question":"HTTPS يضمن أن الموقع الذي تزوره شرعي وجدير بالثقة.","answer":false,"explanation":"HTTPS يشفر الاتصال فقط. مواقع التصيد يمكنها أيضاً استخدامه. تحقق دائماً من اسم النطاق."},
+      {"category":"البرامج الضارة","question":"برامج الفدية تشفر ملفاتك وتطالب بدفع مقابل استعادة الوصول إليها.","answer":true,"explanation":"برامج الفدية تشفر البيانات وتبتز الضحايا. النسخ الاحتياطية غير المتصلة هي أفضل دفاع."},
+      {"category":"الشبكات","question":"جدار الحماية وحده كافٍ للحماية من جميع التهديدات الإلكترونية.","answer":false,"explanation":"جدران الحماية تصفي حركة الشبكة لكنها لا تستطيع إيقاف التصيد أو التهديدات الداخلية أو ثغرات اليوم الصفري."},
+      {"category":"الهندسة الاجتماعية","question":"هجمات الهندسة الاجتماعية تستهدف علم النفس البشري بدلاً من الثغرات التقنية.","answer":true,"explanation":"الهندسة الاجتماعية تتلاعب بالأشخاص لإفشاء معلومات. التدريب هو المفتاح."},
+      {"category":"البيانات","question":"حذف ملف وتفريغ سلة المحذوفات يزيله نهائياً من القرص الصلب.","answer":false,"explanation":"تبقى البيانات على القرص حتى يتم الكتابة فوقها. استخدم أدوات المسح الآمن للملفات الحساسة."},
+      {"category":"VPN","question":"VPN يجعلك مجهول الهوية تماماً على الإنترنت.","answer":false,"explanation":"VPN يخفي عنوان IP عن المواقع لكن مزود VPN لا يزال يستطيع رؤية حركة مرورك."},
+      {"category":"الهجمات","question":"هجوم DDoS يغمر الخادم بحركة مرور لجعله غير متاح للمستخدمين الشرعيين.","answer":true,"explanation":"هجمات الحرمان الموزعة تُثقل الخوادم باستخدام آلاف الأجهزة المخترقة في وقت واحد."},
+      {"category":"المصادقة","question":"OAuth يسمح لتطبيقات الطرف الثالث بالوصول إلى حسابك دون مشاركة كلمة مرورك.","answer":true,"explanation":"OAuth يمنح وصولاً محدوداً عبر رموز مميزة. الطرف الثالث لا يرى أبداً بيانات اعتمادك الحقيقية."},
+      {"category":"الثغرات","question":"ثغرات اليوم الصفري هي ثغرات معروفة على نطاق واسع وتتوفر لها تصحيحات.","answer":false,"explanation":"ثغرات اليوم الصفري هي ثغرات مجهولة لا تتوفر لها تصحيحات، مما يجعلها بالغة الخطورة."},
+      {"category":"النسخ الاحتياطي","question":"قاعدة 3-2-1 توصي بـ3 نسخ على نوعين مختلفين من الوسائط مع تخزين 1 خارج الموقع.","answer":true,"explanation":"تضمن قاعدة 3-2-1 بقاء البيانات في مواجهة أعطال الأجهزة والكوارث المحلية وبرامج الفدية."}
+    ]
+  }
+}
